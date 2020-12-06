@@ -1,0 +1,132 @@
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+/** palette: https://coolors.co/ccc197-403e33-575655-1e1f1c-0a0a08 **/
+:root {
+    --color-bg: #344;
+    --color-bg-d1: #233;
+    --color-bg-d2: #122;
+    --color: #fff;
+
+    --color-sage: #ccc197;
+    --color-davys-grey: #575655;
+    --color-black-olive: #403e33;
+    --color-eerie-black: #1e1f1c;
+    --color-rich-black: #0A0A08;
+
+    --color-light-2: var(--color-sage);
+    --color-light-2-c: black;
+    --color-light: var(--color-davys-grey);
+    --color-light-c: white;
+    --color-normal: var(--color-black-olive);
+    --color-normal-c: white;
+    --color-dark: var(--color-eerie-black);
+    --color-dark-c: white;
+    --color-dark-2: var(--color-rich-black);
+    --color-dark-2-c: white;
+
+    --color-theme: black;
+    --color-theme-c: white;
+    --color-theme-focus: #222;
+    --color-theme-focus-c: white;
+}
+body {
+    margin: 0;
+    background-color: black;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.button {
+    background-color: var(--color-theme);
+    border: none;
+    padding: 1ch 1em;
+    color: var(--color-theme-c);
+    transition: background-color .3s;
+}
+.button:hover {
+    background-color: var(--color-theme-focus);
+    color: var(--color-theme-focus-c);
+    /* filter: brightness(1.5); */
+}
+.button:focus {
+    border: none;
+    outline: none;
+}
+.horizontal-menu {
+    display: flex;
+}
+.vertical-menu {
+    display: flex;
+    flex-direction: column;
+    /* background-color: var(--color-bg-d1); */
+}
+.horizontal-content {
+    display: flex;
+    justify-content: space-between;
+}
+.horizontal-group {
+    display: flex;
+    justify-content: start;
+    align-self: stretch;
+}
+.content {
+    flex-grow: 1;
+    align-self: stretch;
+}
+#code-editor {
+    height: 100%;
+    width: 100%;
+}
+
+.bg-light-2 {
+    background-color: var(--color-light-2);
+    color: var(--color-light-2-c);
+}
+.bg-light {
+    background-color: var(--color-light);
+    color: var(--color-light-c);
+}
+.bg-normal {
+    background-color: var(--color-normal);
+    color: var(--color-normal-c);
+}
+.bg-dark {
+    background-color: var(--color-dark);
+    color: var(--color-dark-c);
+}
+.bg-dark-2 {
+    background-color: var(--color-dark-2);
+    color: var(--color-dark-2-c);
+}
+
+.theme-light-2 {
+    --color-theme: var(--color-light-2);
+    --color-theme-c: var(--color-light-2-c);
+    --color-theme-focus: var(--color-light);
+    --color-theme-focus-c: var(--color-light-c);
+}
+.theme-light {
+    --color-theme: var(--color-light);
+    --color-theme-c: var(--color-light-c);
+    --color-theme-focus: var(--color-light-2);
+    --color-theme-focus-c: var(--color-light-2-c);
+}
+.theme-normal {
+    --color-theme: var(--color-normal);
+    --color-theme-c: var(--color-normal-c);
+    --color-theme-focus: var(--color-light);
+    --color-theme-focus-c: var(--color-light-c);
+}
+.theme-dark {
+    --color-theme: var(--color-dark);
+    --color-theme-c: var(--color-dark-c);
+    --color-theme-focus: var(--color-normal);
+    --color-theme-focus-c: var(--color-normal-c);
+}
+.theme-dark-2 {
+    --color-theme: var(--color-dark-2);
+    --color-theme-c: var(--color-dark-2-c);
+    --color-theme-focus: var(--color-normal-2);
+    --color-theme-focus-c: var(--color-normal-2-c);
+}

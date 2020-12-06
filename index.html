@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-IDE</title>
+    <link rel="stylesheet" href="./src/theme.css">
+    <script src="./src/main.js" type="module" ></script>
+</head>
+<body class="theme-dark">
+    <nav class="horizontal-menu bg-dark">
+        <ide-dropdown>
+            <button class="button" slot="label">File</button>
+            <div slot="list" >
+            <button class="button" id="btn-newfile">New File</button>
+            </div>
+        </ide-dropdown>
+        <ide-dropdown>
+            <button slot="label" class="button" >Edit</button>
+            <button slot="list" class="button" >Undo</button>
+            <button slot="list" class="button" >Redo</button>
+        </ide-dropdown>
+    </nav>
+    <div class="horizontal-content bg-dark-2">
+        <div class="horizontal-group" >
+            <div class="vertical-menu bg-dark" >
+                <button class="button" ><span class="material-icons">folder</span></button>
+                <button class="button" ><span class="material-icons">search</span></button>
+                <button class="button" ><span class="material-icons">extension</span></button>
+            </div>
+            <div class="panel">
+                <div class="file-tree" >
+                    <ide-dropdownlist>
+                        <div slot="label" >Folder</div>
+                        <ide-dropdownlist slot="item">
+                            <div slot="label" >Folder</div>
+                        </ide-dropdownlist>
+                        <div slot="item" >File</div>
+                    </ide-dropdownlist>
+                    <ul>
+                        <li>
+                            folder
+                            <ul>
+                                <li>folder</li>
+                                <li>file</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="content" >
+            <div id="tabs" class="horizontal-menu">
+                <button class="button"><span class="material-icons" style="font-size: 1em;">add</span></button>
+            </div>
+            <div id="code-editor" ></div>
+            <div id="code-footer" class="horizontal-content" >
+                <div>x</div>
+                <div>
+                    <select id="code-lang">
+                        <option value="text">text</option>
+                        <option value="javascript">javascript</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

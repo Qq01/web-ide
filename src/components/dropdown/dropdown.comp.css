@@ -1,0 +1,20 @@
+slot[name="list"] {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+}
+:host([open]) slot[name="list"] {
+    display: flex;
+    z-index: 1;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+:host([open]) .overlay {
+    display: block;
+}
